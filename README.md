@@ -13,7 +13,7 @@ Calculate a expression.
 * arithmetic operators: +, -, *, /, %, where / means integer division. That is, a/b =  $\lfloor\frac{a}{b}\rfloor$
 * parentheses: (, )
 - For example, assume that Lisa inputs
-  - 1+2=*5+(1+7+11)=%5-11=
+  - `1+2=*5+(1+7+11)=%5-11=`
   
 ## 2. Purple Cow
 ## Description
@@ -60,11 +60,12 @@ Give **k** string with length **l**,if flag == 0, then return whether the set of
         hash_val = (((hash_val*base)%q)+dict[str[i]])%q;
     }
 ```
-    - q: a big prime number to avoid collision.
-    - base: in lower case, the base will be 26, because the number of lower case is 26.
-    - To avoid overflow, we do a % operation after every * and + operation.
-    - We can get the hash value of the string which skip calculate the pos_i char in constant time only if we have get the hash value of string(without skip any char).
-    - [Modular property](https://en.wikipedia.org/wiki/Modular_arithmetic#Properties)
+  - q: a big prime number to avoid collision.
+  - base: in lower case, the base will be 26, because the number of lower case is 26.
+  - To avoid overflow, we do a % operation after every * and + operation.
+  - We can get the hash value of the string which skip calculate the pos_i char in constant time only if we have get the hash value of string(without skip any char).
+  - [Modular property](https://en.wikipedia.org/wiki/Modular_arithmetic#Properties)
+    
 3. Use sort algorithm to sort the hash value table.
 4. Build up a record table to check visited string.
 5. Use Binary Search to find the same hash value string.For example, first, you get a unvisited string's hash value H1.Second, you heve to check the same value in the    Hash value table(which is 2D array), so we have to search every row to find out the H1.
