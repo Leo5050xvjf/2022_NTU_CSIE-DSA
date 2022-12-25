@@ -55,9 +55,11 @@ Give **k** string with length **l**,if flag == 0, then return whether the set of
 1. Build a hash table of all string.By similar Def, we will calculate hash value of string which skip pos_i char,where i is: 0< = i < l.
 2.The efficient way is calculate the have value by the following property: 
     **part of code**: 
+```
     for (int i = 0; i < l; ++i) {
         hash_val = (((hash_val*base)%q)+dict[str[i]])%q;
     }
+```
     - q: a big prime number to avoid collision.
     - base: in lower case, the base will be 26, because the number of lower case is 26.
     - To avoid overflow, we do a % operation after every * and + operation.
