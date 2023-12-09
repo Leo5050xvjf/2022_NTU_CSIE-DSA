@@ -46,6 +46,6 @@ Give a string and add the minimum number of characters to convert it into a pali
 ### Solution
 1. Record data offline to backtrack to a specific day.
 2. Implement a segment tree and treap (min heap + binary tree).
-3. Apply a lazy tag for efficient updates.
+3. Apply a lazy tag for efficient updates.(吉如一線段數)
    - Reference: [Implicit Treap Implementation](https://github.com/ShahjalalShohag/code-library/blob/master/Data%20Structures/Implicit%20Treap.cpp)
    - Note: The uploaded code contains some bugs.
